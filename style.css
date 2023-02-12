@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+.main-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.form-container {
+  display:flex;
+  flex-direction:column;
+  border-radius: 3px;
+  padding: 25px 50px 25px 50px;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+  position:relative;
+}
+
+body {
+  background: #262D37;
+  font-family: 'Poppins', sans-serif;
+}
+
+form {
+  background: #2C3444;
+  max-width: 30%;
+  margin: auto;
+  border: #43455b 1.5px solid;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: left;
+  color: #A3B1D7;
+  font-weight: bold;
+  margin-block-start: 0em;
+  margin-block-end: 0.67em;
+}
+
+label {
+  color: #7A84A4;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-group input {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 3em;
+  background-color: #ffffff;
+  border-style:none;
+  color: #000000;
+  border-radius: 3px;
+  margin-top:  0.5em;
+  display:block
+}
+
+.success input{
+border: 2px #2ecc71 solid;
+}
+
+.error input{
+  border: 2px #e74c3c solid;
+  }
+  
+
+.form-group i{
+position:absolute;
+top: 32px;
+right: 10px;
+visibility: hidden;
+}
+
+.success i.check-circle{
+visibility:visible;
+}
+
+.error i.exclamation-circle{
+  visibility:visible;
+  }
+
+.form-group p{
+  font-size:10px;
+  color:#e74c3c;
+  margin-top: 0.5em;
+  visibility: hidden;
+}
+
+.error p{
+visibility: visible;
+}
+
+button {
+  font-size: 10px;
+  line-height: 3em;
+  border: 2px solid #000000;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #6D66F8;
+  color: #ffffff;
+  margin-top:1.5em;
+}

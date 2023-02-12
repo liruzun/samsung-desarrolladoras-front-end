@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="main-container">
+          <form id="form" class="form" action="/" method="post">
+            
+          <div class="form-container">
+            
+            <h1>Create Account</h1>
+
+            <div class="form-group">
+              <label id="name-label" for="name">Nombre</label>
+              <input type="text" id="name" name="name" title="Introduzca su nombre completo">
+              <i class="check-circle">
+                <img src="images/success-icon.svg" alt="success-icon">
+              </i>
+              <i class="exclamation-circle">
+                <img src="images/error-icon.svg" alt="error-icon">
+              </i>
+              <p id="name-message">Error message</p>
+            </div>
+
+            <div class="form-group ">
+              <label id="email-address" for="email">Email</label>
+              <input type="email" id="email" name="email" title="Introduzca su correo electrónico">
+              <i class="check-circle">
+                <img src="images/success-icon.svg" alt=" success-icon">
+              </i>
+              <i class="exclamation-circle">
+                <img src="images/error-icon.svg" alt="error-icon">
+              </i>
+              <p id="email-message">Error message</p>
+            </div>
+
+            <div class="form-group ">
+              <label id="password-label" for="password">Clave</label>
+              <input type="password" id="password" name="password" title="Mínimo 8 caracteres">
+
+              <i class="check-circle">
+                <img src="images/success-icon.svg" alt=" success-icon">
+              </i>
+              <i class="exclamation-circle">
+                <img src="images/error-icon.svg" alt="error-icon">
+              </i>
+              <p id="password-message">Error message</p>
+            </div>
+
+            <div class="form-group ">
+              <label id="confirm_password-label" for="confirm_password">Confirme su clave</label>
+              <input type="password" id="confirm_password" name="confirm_password" title="Confirme su clave">
+              <i class="check-circle">
+                <img src="images/success-icon.svg" alt=" success-icon">
+              </i>
+              <i class="exclamation-circle">
+                <img src="images/error-icon.svg" alt="error-icon">
+              </i>
+              <p id="confirm_password-message"></p>
+            </div> 
+          <div class="form-group">
+            <button type="submit" name="submit">Enviar</button>
+          </div>
+        </div> 
+        </form>
+  </div>
+    <script src="./index.js"></script>   
+</body>
+</html>
