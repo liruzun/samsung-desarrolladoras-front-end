@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-.main-container{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-container {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   border-radius: 3px;
   padding: 25px 50px 25px 50px;
 }
 
-.form-group{
-  display:flex;
-  flex-direction:column;
-  position:relative;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 body {
@@ -47,50 +47,50 @@ label {
 }
 
 .form-group input {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
   line-height: 3em;
   background-color: #ffffff;
-  border-style:none;
+  border-style: none;
   color: #000000;
   border-radius: 3px;
-  margin-top:  0.5em;
-  display:block
+  margin-top: 0.5em;
+  display: block
 }
 
-.success input{
-border: 2px #2ecc71 solid;
+.success input {
+  border: 2px #2ecc71 solid;
 }
 
-.error input{
+.error input {
   border: 2px #e74c3c solid;
-  }
-  
-
-.form-group i{
-position:absolute;
-top: 32px;
-right: 10px;
-visibility: hidden;
 }
 
-.success i.check-circle{
-visibility:visible;
+
+.form-group i {
+  position: absolute;
+  top: 32px;
+  right: 10px;
+  visibility: hidden;
 }
 
-.error i.exclamation-circle{
-  visibility:visible;
-  }
+.success i.check-circle {
+  visibility: visible;
+}
 
-.form-group p{
-  font-size:10px;
-  color:#e74c3c;
+.error i.exclamation-circle {
+  visibility: visible;
+}
+
+.form-group p {
+  font-size: 10px;
+  color: #e74c3c;
   margin-top: 0.5em;
   visibility: hidden;
 }
 
-.error p{
-visibility: visible;
+.error p {
+  visibility: visible;
 }
 
 button {
@@ -101,13 +101,13 @@ button {
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  letter-spacing:0.1em;
+  letter-spacing: 0.1em;
   background: #6D66F8;
   color: #ffffff;
-  margin-top:1.5em;
+  margin-top: 1.5em;
   cursor: pointer
 }
-button:hover {
-  opacity:0.9;
-}
 
+button:hover {
+  opacity: 0.9;
+}
