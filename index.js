@@ -7,13 +7,11 @@ const confirm_password = document.getElementById("confirm_password");
 
 function setError(element, errorMessage) {
   const parent = element.parentElement;
+  const id = element.id;
   if (parent.classList.contains("success")) {
     parent.classList.remove("success"); //saca success si ya está para que no se muestren ambas
   }
   parent.classList.add("error"); //defino constantes para reemplazar los parrafos predefinidos de acuerdo al error
-
-  const id = element.id;
-
   const paragraph = document.getElementById(`${id}-message`);//concatenacion id y message
   paragraph.textContent = errorMessage;
 
@@ -36,9 +34,13 @@ function isEmailValid(email) {
 
 
 function validateForm() {
+  let countError = false;
+  
+
   //username
   if (username.value.trim() == "") {
     setError(username, "Rellene este campo");
+    countError=true
   }
   else {
     setSuccess(username);
@@ -47,9 +49,11 @@ function validateForm() {
   //email
   if (email.value.trim() == "") {
     setError(email, "Rellene este campo");
+    countError=true
   }
   else if (!isEmailValid(email.value)) {
     setError(email, "Email Inválido");
+    countError=true
   } else {
     setSuccess(email);
   }
@@ -57,9 +61,11 @@ function validateForm() {
   //clave
   if (password.value.trim() == "") {
     setError(password, "Rellene este campo");
+    countError=true
   }
   else if (password.value.trim().length < 8) {
     setError(password, "Debe tener más de 8 caracteres");
+    countError=true
   } else {
     setSuccess(password);
   }
@@ -67,13 +73,18 @@ function validateForm() {
   //confirmacion clave
   if (confirm_password.value.trim() == "") {
     setError(confirm_password, "Rellene este campo");
+    countError=true
   }
-  else if (confirm_password !== password) {
+  else if (confirm_password.value !== password.value) {
     setError(confirm_password, "Las contraseñas no coinciden");
+    countError=true
   }
-  else if (confirm_password == password) {
+  else if (confirm_password.value == password.value) {
     setSuccess(confirm_password);
   }
+
+return !countError
+
 
 }
 
@@ -81,5 +92,8 @@ function validateForm() {
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  validateForm();
+  if(validateForm()){
+    alert("La inscripción ha sido correcta");
+    form.submit();
+  }
 })
